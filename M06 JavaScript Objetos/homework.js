@@ -104,7 +104,7 @@ function actualizarPassword(objetoUsuario, nuevaPassword) {
    // La nueva contraseña la recibes por parámetro.
    // Retornar el objeto.
    // Tu código:
-   objetoUsuario.password = nuevaPassword;    // o objetoUsuario["password"]
+   objetoUsuario.password = nuevaPassword;    // o objetoUsuario["password"]. Se utiliza comillas por saber su propiedad.
    return objetoUsuario;
 }
 
@@ -113,6 +113,8 @@ function agregarAmigo(objetoUsuario, nuevoAmigo) {
    // Debes agregar el "nuevoAmigo" al final de este arreglo.
    // Retornar el objeto.
    // Tu código:
+   
+   // ejemplo visual ->    objetoUsuario { amigos: [prop 1, prop2...nuevoAmigo]}
    objetoUsuario.amigos.push(nuevoAmigo);
    return objetoUsuario;
 } 
@@ -123,6 +125,8 @@ function pasarUsuarioAPremium(objetoMuchosUsuarios) {
    // Define esta propiedad de todos los usuarios como true.
    // Retornar el arreglo.
    // Tu código:
+  
+  // ejemplo visual ->        objetoMuchosUsuarios [{esPremium: true}, {esPremium: true},... ]
    objetoMuchosUsuarios.forEach(usuario => {    //até aqui, funcion array 
     usuario.esPremium = true     // aqui ja é objeto. Se accede a la propiedad y se cambia el valor
    });
@@ -142,8 +146,8 @@ function sumarLikesDeUsuario(objetoUsuario) {
    // Debes sumar los likes de todos los post y retornar el resultado.
    // Tu código:
                                                   // "porst o elemento"
-   // ejemplo visual ->        objetoUsuario: { posts: [{likes: 5}, {likes: 8}, {likes: 3}]}
- var contador = 0                             // Se crea una var, posteriormente, ap partir del objeto se accesa la propiedad que, por
+   // ejemplo visual ->        objetoUsuario { posts: [{likes: 5}, {likes: 8}, {likes: 3}]}
+ var contador = 0                             // Se crea una var, posteriormente, a partir del objeto se accesa la propiedad que, por
  objetoUsuario.posts.forEach(post => {    // contener un array, es seguida de un forEach (elemento => {})
    contador = contador + post.likes
  })
