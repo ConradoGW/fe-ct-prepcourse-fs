@@ -275,17 +275,17 @@ function breakStatement(num) {
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
    let newArray = [];
-   for (i = 0; i < 10; i++){
+    for (i = 0; i < 10; i++){
       num = num + 2;
       if (num === i){
          break
       } else{
          newArray.push(num);
       }
-   }
-   if (newArray.length < 10){
+    }
+    if (newArray.length < 10){
       return "Se interrumpió la ejecución"
-   } else {
+    } else {
       return newArray
    }
 }
@@ -299,7 +299,7 @@ function continueStatement(num) {
    // Tu código:
    let newArray = [];
    for (i = 0; i < 10; i++){
-      if (i === 5){
+       if (i === 5){
          continue;
       } else{
          num = num + 2;
